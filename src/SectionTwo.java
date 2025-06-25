@@ -2,26 +2,56 @@
 import java.util.Scanner;
 
 public class SectionTwo {
-    public static  void main(String[] args) {
-       Scanner scanner = new Scanner(System.in);
+//    public static  void main(String[] args) {
+//       Scanner scanner = new Scanner(System.in);
+//
+//       System.out.println("Enter base of triangle: ");
+//       int base = scanner.nextInt();
+//       scanner.nextLine();
+//
+//       System.out.println("Enter height of triangle: ");
+//       int height = scanner.nextInt();
+//       int multiplier = base * height;
+//
+//       double area = 0.5 * multiplier;
+//       System.out.println("The area of the triangle is: " + area);
+//        scanner.close();
+//    }
 
-       System.out.println("Enter base of triangle: ");
-       int base = scanner.nextInt();
-       scanner.nextLine();
+    public static void main (String[] args) {
+        Scanner scanner = new Scanner(System.in);
 
-       System.out.println("Enter height of triangle: ");
-       int height = scanner.nextInt();
-       int multiplier = base * height;
+        String name;
+        String adjective1;
+        String noun1;
+        String verb1;
+        String adjective2;
 
-       double area = 0.5 * multiplier;
-       System.out.println("The area of the triangle is: " + area);
+        System.out.println("Enter a name: ");
+        name = scanner.nextLine();
+
+        System.out.println("Enter an adjective: ");
+        adjective1 = scanner.nextLine();
+
+        System.out.println("Enter another noun: ");
+        noun1 = scanner.nextLine();
+
+        System.out.println("Enter a verb: ");
+        verb1 = scanner.nextLine();
+
+        System.out.println("Enter one more adjective: ");
+        adjective2 = scanner.nextLine();
+
+        System.out.println("Today i saw" + name + "\n he was wearing a " + adjective1 + " shirt and \n" +
+                "he was just a" + noun1 + ". \nI hope he is happy with " +  verb1 + "and \nfull of " + adjective2
+                );
         scanner.close();
     }
 }
 //  NOTES
 //
 /*
-when accepting an integer first then a sting, sometimes there is new line chavacter like `/n` which is passed
+when accepting an integer first then a sting, sometimes there is new line character like `/n` which is passed
 into the reading buffer, and triggers the submission of an empty string to the
 scanner asking for a string. example:
     System.out.print("What is your age");
