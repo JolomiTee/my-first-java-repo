@@ -44,7 +44,7 @@ public class SectionTwo {
 
         System.out.println("Today i saw" + name + "\n he was wearing a " + adjective1 + " shirt and \n" +
                 "he was just a" + noun1 + ". \nI hope he is happy with " +  verb1 + "and \nfull of " + adjective2
-                );
+        );
         scanner.close();
     }
 }
