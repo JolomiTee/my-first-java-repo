@@ -1,4 +1,8 @@
+import java.util.Scanner;
+
 public class Methods {
+    static Scanner scanner = new Scanner(System.in);
+
     public static void main (String[] args) {
 //        String name = "Taiwo";
 //        int age= 22;
@@ -15,10 +19,87 @@ public class Methods {
 
 //        System.out.println(add(2,3, 4));
 
-        String pizza = bakePizza("flat bread", "mozarella", "pineapple");
-        System.out.println(pizza);
+//        String pizza = bakePizza("flat bread", "mozarella", "pineapple");
+//        System.out.println(pizza);
+
+//        JAVA BANKING PROGRAM FOR BEGINNERS
+
+//        DECLARE VARS
+        double balance = 10.99;
+        boolean isRunning = true;
+        int choice;
+
+        while (isRunning) {
+            System.out.println("**************");
+            System.out.println("BANKING PROGRAM");
+            System.out.println("**************");
+            System.out.println("1. Show Balance");
+            System.out.println("2. Deposit");
+            System.out.println("3. Withdraw");
+            System.out.println("4. Exit");
+            System.out.println("**************");
 
 
+            System.out.print("Enter your choice (1-4): ");
+            choice = scanner.nextInt();
+
+
+//        DISPLAY MENU
+            switch (choice){
+//        showBalance()
+                case 1 -> showBalance(balance);
+//        deposit()
+                case 2 -> balance += deposit();
+//        withdraw()
+                case 3 -> balance -= withdraw(balance);
+//        exit
+                case 4 -> isRunning = false;
+                default -> System.out.println("Enter a number between 1 - 4");
+            }
+        }
+
+
+        System.out.println("****************");
+        System.out.println("Thank you have a nice day");
+        System.out.println("****************");
+
+        scanner.close();
+    }
+
+    static void showBalance(double balance) {
+        System.out.printf("Your available balance is $%.2f\n", balance);
+    }
+
+    static double deposit () {
+        double amount;
+
+        System.out.println("Enter an amount to be deposited");
+        amount = scanner.nextDouble();
+
+        if (amount < 0) {
+            System.out.println("Amount cant be negative");
+            return 0;
+        } else {
+            return amount;
+        }
+
+    }
+
+    static double withdraw(double balance){
+        double amount;
+
+        System.out.println("Enter amount to withdraw");
+        amount = scanner.nextDouble();
+
+        if (amount > balance) {
+            System.out.println("Insufficient funds");
+            return 0;
+        } else if (amount < 0) {
+            System.out.println("Amount cant be negative");
+            return  0;
+        } else {
+            return  amount;
+        }
     }
 
 
@@ -62,15 +143,15 @@ public class Methods {
 //        return a + b + c;
 //    }
 
-    static  String bakePizza (String bread) {
-        return bread + " pizza";
-    }
-
-    static  String bakePizza (String bread, String cheese) {
-        return cheese + " " + bread + " pizza";
-    }
-
-    static  String bakePizza (String bread, String cheese, String topping) {
-        return topping + " " + cheese + " " + bread + " pizza";
-    }
+//    static  String bakePizza (String bread) {
+//        return bread + " pizza";
+//    }
+//
+//    static  String bakePizza (String bread, String cheese) {
+//        return cheese + " " + bread + " pizza";
+//    }
+//
+//    static  String bakePizza (String bread, String cheese, String topping) {
+//        return topping + " " + cheese + " " + bread + " pizza";
+//    }
 }
