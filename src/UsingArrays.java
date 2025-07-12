@@ -25,7 +25,7 @@ public class UsingArrays {
 //            System.out.println(fruits);
 //        }
 
-        String[] foods = {"apple", "orange", "banana"};
+//        String[] foods = {"apple", "orange", "banana"};
 
 //        System.out.println(foods.length);
 

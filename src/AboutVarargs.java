@@ -18,7 +18,7 @@ public class AboutVarargs {
         }
 
         return  sum;
-    };
+    }
 
     static double average(int... numbers){
 
@@ -29,5 +29,5 @@ public class AboutVarargs {
         }
 
         return  sum / numbers.length;
-    };
+    }
 }
