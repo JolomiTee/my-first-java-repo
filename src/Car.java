@@ -1,9 +1,9 @@
 public class Car {
-    String make = "Mercedes";
-    String model = "G63";
-    int year = 2022;
-    double price = 50000.34;
-    boolean isRunning = false;
+    String make;
+    String model;
+    int year;
+    double price;
+    boolean isRunning;
 
     void start(){
         isRunning = true;
@@ -21,6 +21,13 @@ public class Car {
 
     void brake(){
         System.out.println("You brake the " + model);
+    }
+
+    Car (String make, String model, int year) {
+        this.model = model;
+        this.make = make;
+        this.year = year;
+        this.isRunning = false;
     }
 
 
